@@ -1,12 +1,14 @@
 import Navbar from "./Navbar"
 import {Modal} from "./data/type"
+import DeleteIcon from '@mui/icons-material/Delete';
 type Props = {
     cart: Modal[]
     onAdd: (product:Modal)=> void;
     onRemove: (product:Modal)=> void;
+    handleDelete: (id:number)=> void
 }
 
-const Cart = ({cart,onAdd,onRemove}:Props) =>{
+const Cart = ({cart,onAdd,onRemove,handleDelete}:Props) =>{
     const background = {
         backgroundImage: `url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80")`
     }
@@ -33,6 +35,7 @@ const Cart = ({cart,onAdd,onRemove}:Props) =>{
                                         <span className="text-2xl flex-1 md: flex-1 cursor-pointer hover:text-black focus:text-black transition ease-in transition-300 text-center" onClick={()=> onAdd(item)}>+</span>
                                         <span className="text-2xl flex-1 md:flex-1 cursor-pointer hover:text-black focus:text-black transition ease-in transition-300 text-center" onClick={()=> onRemove(item)}>-</span>
                                         <div className="md:flex-1 text-center"> {item.quantity} x {item.price.toFixed(2)} </div>
+                                        <DeleteIcon onClick={ () => handleDelete(item.id)}className="cursor-pointer"/>
                                     </div>
                                 </div>
                             )
