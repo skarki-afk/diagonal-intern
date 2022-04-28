@@ -1,12 +1,3 @@
-// const formulatePayment = (choice,amount) =>{
-//     const initialPayment =((10/100) * amount).toFixed(2);
-//     const remainingTotal = amount - initialPayment;
-
-//     if (choice === "weekly"){
-//         let weeklyAmountPayment = 
-//     }
-// }
-
 
 
 const formulatePayment = (choice, amount) => { 
@@ -36,7 +27,7 @@ const formulatePayment = (choice, amount) => {
         while (monthly > 36) { 
             monthlyPrice = monthlyPrice + 100; 
             let months = remainingTotal / monthlyPrice;  
-            
+
             if (months % 100 !== 0) { 
                 monthly = Math.ceil(months); 
             } 
