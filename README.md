@@ -1,6 +1,6 @@
 ## To run Menu:
 
-> Open Menu folder and then perform
+> Open Menu folder and then perform following in terminal
 
 ```
 npm start

@@ -17,16 +17,17 @@ const displacement = (n,m) =>{
     else if (m>n){
         minTime = (m-n)*speed[0] + speed[1] + speed[2] + n*speed[0] + speed[1]
     }
-    else if (n>m){
-        minTime = (n-m)*speed[3] + speed[1] + speed[2] + m*speed[0] + speed[1]
-    }
     else if (n>m && n<=4){
         minTime = n * speed[3]
+    }
+    else if (n>m){
+        minTime = (n-m)*speed[3] + speed[1] + speed[2] + m*speed[0] + speed[1]
     }
     else if (m=n){
         minTime = speed[1] + speed[2] + m*speed[0] + speed[1]
     }
     console.log(minTime)
+    console.log(speed, n , m)
 }
 
-displacement(7,6)
+displacement(3,2)
