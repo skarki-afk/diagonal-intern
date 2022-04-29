@@ -55,7 +55,7 @@ const Cart = ({cart,onAdd,onRemove,handleDelete}:Props) =>{
                                 <h4>total price :</h4> <div>Rs. {totalPrice} </div>
                             </div>
                         </div>}
-                        {cart.length !==0 && <button className="w-3/4 bg-slate-700 uppercase rounded-lg font-semibold absolute bottom-10 focus:bg-blue-200 focus:text-black md:hover:bg-blue-200 md:hover:text-black transition ease-in transition-300">
+                        {cart.length !==0 && <button className="w-3/4 bg-slate-700 uppercase rounded-lg font-semibold  focus:bg-blue-200 focus:text-black md:hover:bg-blue-200 md:hover:text-black transition ease-in transition-300">
                             checkout
                         </button>}
                     </div>

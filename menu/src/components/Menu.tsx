@@ -35,8 +35,8 @@ const Menu:React.FC<Props> = ({onAdd}) =>{
                 <h3 className={`text-3xl text-center`}>Menu</h3>
                 <div className={`flex flex-col md:flex-row flex-wrap ${error || isPending? "pt-5" : ""} items-center md:justify-between`}>
                     {data && menuDetail}
-                    {error && <div>{error}</div>}
-                    {isPending && <div className='text-xl'>Loading....</div>}
+                    {error && <div className='font-bold text-xl text-center w-full'>{error}</div>}
+                    {isPending && <div className='text-xl font-bold text-center w-full'>Loading....</div>}
                 </div>
             </div>
         </div>

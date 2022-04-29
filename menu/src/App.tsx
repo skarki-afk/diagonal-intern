@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Hero from './components/Hero';
 import Cart from './components/Cart';
-import useFetch from './components/data/useFetch';
 import {Modal} from "./components/data/type"
 
 
@@ -28,11 +27,13 @@ function App() {
   const onRemove = (product:Modal) =>{
     cart.map(x => {
       if(x.quantity === 1){
-        setCart(cart.filter(x => x.id !== product.id))
+        setCart(prevCart => prevCart.filter(x => x.id !== product.id))
+        // setCart(prevCart => prevCart.map(x=> x.id === product.id? {...x, quantity: 1}: x))
       }
       else{
-        setCart(cart.map(x=> x.id === product.id? {...x, quantity: x.quantity - 1}: x))
+        setCart(cart.map(x=> x.id === product.id? {...x, quantity: x.quantity ===1? 1 : x.quantity - 1 }: x))
       }
+      return x
     })
   }
   // const onRemove = (product:Modal) =>{
