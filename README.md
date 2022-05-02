@@ -9,6 +9,14 @@ npm start
 
 ## To run the fake api of Menu:
 
+> Go to Menu folder through terminal by :
+
+```
+cd menu
+```
+
+> then run the following code :
+
 ```
 npx json-server --watch data/db.json --port 8000
 

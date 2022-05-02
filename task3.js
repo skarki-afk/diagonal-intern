@@ -1,6 +1,6 @@
 const displacement = (n,m) =>{
     let speed = []
-    let minTime = null
+    let minTime;
     if(m>0 && m<4){
         speed = [2,3,4,5]
     }
@@ -27,7 +27,7 @@ const displacement = (n,m) =>{
         minTime = speed[1] + speed[2] + m*speed[0] + speed[1]
     }
     console.log(minTime)
-    console.log(speed, n , m)
 }
 
-displacement(3,2)
+
+displacement(4,3)

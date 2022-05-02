@@ -31,7 +31,7 @@ function App() {
         // setCart(prevCart => prevCart.map(x=> x.id === product.id? {...x, quantity: 1}: x))
       }
       else{
-        setCart(cart.map(x=> x.id === product.id? {...x, quantity: x.quantity ===1? 1 : x.quantity - 1 }: x))
+        setCart(cart.map(x=> x.id === product.id? {...x, quantity: x.quantity === 1 ? 1 : x.quantity - 1 }: x))
       }
       return x
     })

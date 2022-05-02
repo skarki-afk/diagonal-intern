@@ -40,5 +40,4 @@ const formulatePayment = (choice, amount) => {
         } 
    }; 
    
-
    formulatePayment("weekly" , 1600000)
